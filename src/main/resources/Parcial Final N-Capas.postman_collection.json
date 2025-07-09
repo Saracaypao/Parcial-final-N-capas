@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "c5fadf8d-822b-44af-b91a-e7311df6351f",
+		"name": "Parcial Final N-Capas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36131692"
+	},
+	"item": [
+		{
+			"name": "Tickets",
+			"item": [
+				{
+					"name": "Delete Ticket",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/tickets/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"tickets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tickets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXhpQHBydWViYS5jb20iLCJpYXQiOjE3NTIwMjc5NTgsImV4cCI6MTc1MjAzMTU1OH0.QTEGhl-G18xI9gC55iEAjMDwybnzcmd2oZLocmkwo34",
+									"type": "string"
+								},
+								{
+									"key": "undefined",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Country",
+								"value": "{{country}}",
+								"type": "default",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/tickets",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Ticket",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Country",
+								"value": "{{country}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"titulo\": \"Ticket-06\",\n  \"descripcion\": \"No me funciona encender la compu auxilio\",\n  \"correoUsuario\": \"ldarevalo@uca.edu.sv\",\n  \"correoSoporte\": \"dhurtado@uca.edu.sv\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/tickets?id=9",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"tickets"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ticket By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXhpQHBydWViYS5jb20iLCJpYXQiOjE3NTIwMjc5NTgsImV4cCI6MTc1MjAzMTU1OH0.QTEGhl-G18xI9gC55iEAjMDwybnzcmd2oZLocmkwo34",
+									"type": "string"
+								},
+								{
+									"key": "undefined",
+									"type": "any"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Country",
+								"value": "{{country}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/tickets/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tickets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ticket",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 6,\n    \"descripcion\": \"Trabajando en eso\",\n    \"estado\": \"IN_PROGRESS\",\n    \"correoSoporte\": \"dhurtado@uca.edu.sv\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/tickets?id=9",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"tickets"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXhpQHBydWViYS5jb20iLCJpYXQiOjE3NTIwMjc5NTgsImV4cCI6MTc1MjAzMTU1OH0.QTEGhl-G18xI9gC55iEAjMDwybnzcmd2oZLocmkwo34",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Country",
+								"value": "{{country}}",
+								"type": "default"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/users/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Country",
+								"value": "{{country}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/users/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Country",
+								"value": "{{country}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"nombre\": \"Luisa Arevalo\",\n  \"correo\": \"ldarevalo@uca.edu.sv\",\n  \"password\": \"password123\",\n  \"nombreRol\": \"USER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Email",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Country",
+								"value": "{{country}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/users/ldarevalo@uca.edu.sv",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"ldarevalo@uca.edu.sv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Country",
+								"value": "{{country}}",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"David Hurtado\",\n  \"correo\": \"dhurtado@uca.edu.sv\",\n  \"password\": \"password456\",\n  \"nombreRol\": \"TECH\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"correo\": \"auxi@prueba.com\",\r\n\"password\": \"pass1234\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "country",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
