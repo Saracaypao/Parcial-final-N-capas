@@ -1,0 +1,61 @@
+# Parcial Final N-Capas
+
+Este documento explica cómo compilar, empaquetar y ejecutar la aplicación tanto localmente (sin contenedores) como en Docker.
+
+## Prerrequisitos
+
+Java 21 instalado y en tu PATH.
+Maven 3.8+.
+Docker y **Docker Compose (v2) instalados y corriendo.
+
+## Ejecución local (sin Docker)
+
+1. Clona el proyecto y sitúate en la raíz.
+2. Compila y empaqueta:
+
+En terminal correr:
+   mvn clean package -DskipTests
+
+3. Ejecuta el JAR resultante:
+
+En terminal correr:
+   java -jar target/parcial-final-n-capas-0.0.1-SNAPSHOT.jar
+
+4. La aplicación levantará en el puerto 8080.
+
+
+## Ejecución con Docker
+
+1. Verificar que haya en la raiz del proyecto:
+
+   `Dockerfile junto a `pom.xml`.
+   `docker-compose.yml` configurado.
+
+2. Genera el JAR (solo la primera vez):
+
+En terminal correr:
+   mvn clean package -DskipTests
+
+3. Construye y levanta los contenedores:
+
+En terminal correr
+   docker compose up --build
+
+   Para ejecutar en segundo plano:
+
+En terminal correr:
+   docker compose up --build -d
+
+4. Comprueba con:
+
+En terminal correr:
+   docker ps
+
+   Verás dos contenedores: `db` (Postgres) y `app` (Spring Boot).
+
+
+5. Para detener y eliminar los contenedores:
+
+En terminal correr:
+   docker compose down
+

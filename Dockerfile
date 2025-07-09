@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
 
 # Copiar el JAR
-COPY target/parcial-final-n-capas-0.0.1-SNAPSHOT.jar app.jar
+COPY target/*.jar app.jar
 
 # Exponer el puerto de la app
 EXPOSE 8080

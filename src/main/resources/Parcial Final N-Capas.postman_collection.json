@@ -39,7 +39,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXhpQHBydWViYS5jb20iLCJpYXQiOjE3NTIwMjc5NTgsImV4cCI6MTc1MjAzMTU1OH0.QTEGhl-G18xI9gC55iEAjMDwybnzcmd2oZLocmkwo34",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWNoQHBydWViYS5jb20iLCJpYXQiOjE3NTIwMjg1NTAsImV4cCI6MTc1MjAzMjE1MH0.tQm6DBYQGNhRD64I-VTRDcwqSOHg_0mB57WePjT5vsM",
 									"type": "string"
 								},
 								{
@@ -63,7 +63,8 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:8080/api/tickets",
+							"raw": "http://localhost:8080/api/tickets",
+							"protocol": "http",
 							"host": [
 								"localhost"
 							],
@@ -80,7 +81,14 @@
 					"name": "Save Ticket",
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbGlzZW9AcHJ1ZWJhLmNvbSIsImlhdCI6MTc1MjAyODYxNiwiZXhwIjoxNzUyMDMyMjE2fQ.Yjonp7uVZGgAJZXAZ2gWxEWn_MkBuGWuDzJAtIEO4SE",
+									"type": "string"
+								}
+							]
 						},
 						"method": "POST",
 						"header": [
@@ -93,7 +101,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"titulo\": \"Ticket-06\",\n  \"descripcion\": \"No me funciona encender la compu auxilio\",\n  \"correoUsuario\": \"ldarevalo@uca.edu.sv\",\n  \"correoSoporte\": \"dhurtado@uca.edu.sv\"\n}",
+							"raw": "{\n  \"titulo\": \"Ticket-03\",\n  \"descripcion\": \"No me funciona la vida\",\n  \"correoUsuario\": \"eliseo@prueba.com\",\n  \"correoSoporte\": \"tech@prueba.com\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -101,10 +109,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/api/tickets?id=9",
+							"raw": "localhost:8080/api/tickets?id=9",
 							"host": [
-								"{{baseUrl}}"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"tickets"
@@ -208,7 +217,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXhpQHBydWViYS5jb20iLCJpYXQiOjE3NTIwMjc5NTgsImV4cCI6MTc1MjAzMTU1OH0.QTEGhl-G18xI9gC55iEAjMDwybnzcmd2oZLocmkwo34",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhdXhpQHBydWViYS5jb20iLCJpYXQiOjE3NTIwMjg2ODgsImV4cCI6MTc1MjAzMjI4OH0.XpZUjRlBAcKVjnHtcM6ER5NQRD2Jsq6g_iw0G41gYrQ",
 									"type": "string"
 								}
 							]
@@ -353,7 +362,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"nombre\": \"David Hurtado\",\n  \"correo\": \"dhurtado@uca.edu.sv\",\n  \"password\": \"password456\",\n  \"nombreRol\": \"TECH\"\n}",
+							"raw": "{\n  \"nombre\": \"lucas\",\n  \"correo\": \"tech@prueba.com\",\n  \"password\": \"pass123\",\n  \"nombreRol\": \"TECH\"\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -361,10 +370,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/api/users",
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
 							"host": [
-								"{{baseUrl}}"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"users"
@@ -380,7 +391,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n \"correo\": \"auxi@prueba.com\",\r\n\"password\": \"pass1234\"\r\n}\r\n",
+							"raw": "{\r\n \"correo\": \"tech@prueba.com\",\r\n\"password\": \"pass123\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -388,7 +399,8 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/auth/login",
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
 							"host": [
 								"localhost"
 							],
