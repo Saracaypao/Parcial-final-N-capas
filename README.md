@@ -8,6 +8,9 @@ Este repositorio contiene un proyecto para evaluar y practicar los conceptos de 
 - Sección: 01
 ---
 
+### Instrucciones de ejecución del proyecto
+El proyecto cuenta con instrucciones detalladas de compilación en el archivo **documentacion**, el cual se encuentra ubicado en la raíz del proyecto.
+
 ## Sistema de Soporte Técnico
 
 ### Descripción
